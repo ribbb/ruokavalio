@@ -1,7 +1,3 @@
-// Diet scoring system for Finnish diet analysis
-// Based on the scoring rules from scores.txt
-
-// Function to calculate total diet score
 function calculateDietScore(answers) {
     // Kasvikset, marjat ja hedelmät (0-20 points)
     const kasviksetMarjatHedelmit = scoreKasviksetMarjatHedelmit(answers);
