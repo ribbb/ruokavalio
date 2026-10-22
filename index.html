@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruokavalioanalyysi - Diet Analyzer</title>
+    <link rel="stylesheet" href="diet_analyzer.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ruokavalioanalyysi</h1>
+            <p>Arvioi ruokavaliosi terveysvaikutusta</p>
+        </header>
+
+        <main>
+            <form id="dietForm">
+                <!-- Section 1: Ateriarytmi -->
+                <section class="form-section">
+                    <h2>Ateriarytmi (0–10 pistettä)</h2>
+                    <div class="question-group">
+                        <label for="q1">1. Kuinka usein syöt aamupalan?</label>
+                        <select name="1. Kuinka usein syöt aamupalan?" id="q1">
+                            <option value="Joka päivä">Joka päivä</option>
+                            <option value="4–6 päivänä viikossa">4–6 päivänä viikossa</option>
+                            <option value="1–3 päivänä viikossa">1–3 päivänä viikossa</option>
+                            <option value="Harvemmin kuin kerran viikossa">Harvemmin kuin kerran viikossa</option>
+                            <option value="En syö aamupalaa">En syö aamupalaa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q2">2. Kuinka usein syöt aamupäivällä välipalan?</label>
+                        <select name="2. Kuinka usein syöt aamupäivällä välipalan?" id="q2">
+                            <option value="Joka päivä">Joka päivä</option>
+                            <option value="4–6 päivänä viikossa">4–6 päivänä viikossa</option>
+                            <option value="1–3 päivänä viikossa">1–3 päivänä viikossa</option>
+                            <option value="Harvemmin kuin kerran viikossa">Harvemmin kuin kerran viikossa</option>
+                            <option value="En syö aamupäivän aikana välipalaa">En syö aamupäivän aikana välipalaa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q3">3. Kuinka usein syöt lounaan?</label>
+                        <select name="3. Kuinka usein syöt lounaan?" id="q3">
+                            <option value="Joka päivä">Joka päivä</option>
+                            <option value="4–6 päivänä viikossa">4–6 päivänä viikossa</option>
+                            <option value="1–3 päivänä viikossa">1–3 päivänä viikossa</option>
+                            <option value="Harvemmin kuin kerran viikossa">Harvemmin kuin kerran viikossa</option>
+                            <option value="En syö lounasta">En syö lounasta</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q4">4. Kuinka usein syöt iltapäivällä välipalan?</label>
+                        <select name="4. Kuinka usein syöt iltapäivällä välipalan?" id="q4">
+                            <option value="Joka päivä">Joka päivä</option>
+                            <option value="4–6 päivänä viikossa">4–6 päivänä viikossa</option>
+                            <option value="1–3 päivänä viikossa">1–3 päivänä viikossa</option>
+                            <option value="Harvemmin kuin kerran viikossa">Harvemmin kuin kerran viikossa</option>
+                            <option value="En syö iltapäivän aikana välipalaa">En syö iltapäivän aikana välipalaa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q5">5. Kuinka usein syöt päivällisen tai illallisen?</label>
+                        <select name="5. Kuinka usein syöt päivällisen tai illallisen?" id="q5">
+                            <option value="Joka päivä">Joka päivä</option>
+                            <option value="4–6 päivänä viikossa">4–6 päivänä viikossa</option>
+                            <option value="1–3 päivänä viikossa">1–3 päivänä viikossa</option>
+                            <option value="Harvemmin kuin kerran viikossa">Harvemmin kuin kerran viikossa</option>
+                            <option value="En syö päivällistä tai illallista">En syö päivällistä tai illallista</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q6">6. Kuinka usein syöt iltapalan?</label>
+                        <select name="6. Kuinka usein syöt iltapalan?" id="q6">
+                            <option value="Joka päivä">Joka päivä</option>
+                            <option value="4–6 päivänä viikossa">4–6 päivänä viikossa</option>
+                            <option value="1–3 päivänä viikossa">1–3 päivänä viikossa</option>
+                            <option value="Harvemmin kuin kerran viikossa">Harvemmin kuin kerran viikossa</option>
+                            <option value="En syö iltapalaa">En syö iltapalaa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q7">7. Kuinka usein syöt muita välipaloja aterioiden välillä?</label>
+                        <select name="7. Kuinka usein syöt muita välipaloja aterioiden välillä?" id="q7">
+                            <option value="Joka päivä">Joka päivä</option>
+                            <option value="4–6 päivänä viikossa">4–6 päivänä viikossa</option>
+                            <option value="1–3 päivänä viikossa">1–3 päivänä viikossa</option>
+                            <option value="Harvemmin kuin kerran viikossa">Harvemmin kuin kerran viikossa</option>
+                            <option value="En syö muita välipaloja">En syö muita välipaloja</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Pääruokalajit -->
+                <section class="form-section">
+                    <h2>Pääruokalajit</h2>
+                    <div class="question-group">
+                        <label for="q8">8. Kuinka usein syöt kasvisruokia?</label>
+                        <select name="8. Kuinka usein syöt kasvisruokia?" id="q8">
+                            <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
+                            <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
+                            <option value="2–3 kertaa viikossa">2–3 kertaa viikossa</option>
+                            <option value="kerran viikossa">kerran viikossa</option>
+                            <option value="1–3 kertaa kuukaudessa">1–3 kertaa kuukaudessa</option>
+                            <option value="Harvemmin kuin kerran kuukaudessa">Harvemmin kuin kerran kuukaudessa</option>
+                            <option value="En syö kasvisruokia">En syö kasvisruokia</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q9">9. Kuinka usein syöt kalaruokia?</label>
+                        <select name="9. Kuinka usein syöt kalaruokia?" id="q9">
+                            <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
+                            <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
+                            <option value="2–3 kertaa viikossa">2–3 kertaa viikossa</option>
+                            <option value="kerran viikossa">kerran viikossa</option>
+                            <option value="1–3 kertaa kuukaudessa">1–3 kertaa kuukaudessa</option>
+                            <option value="Harvemmin kuin kerran kuukaudessa">Harvemmin kuin kerran kuukaudessa</option>
+                            <option value="En syö kalaruokia">En syö kalaruokia</option>
+                        </select>
+                    </div>
+                    <div class="question-group">
+                        <label for="q10">10. Kuinka usein syöt kana- tai kalkkunaruokia?</label>
+                        <select name="10. Kuinka usein syöt kana- tai kalkkunaruokia?" id="q10">
+                            <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
+                            <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
+                            <option value="2–3 kertaa viikossa">2–3 kertaa viikossa</option>
+                            <option value="kerran viikossa">kerran viikossa</option>
+                            <option value="1–3 kertaa kuukaudessa">1–3 kertaa kuukaudessa</option>
+                            <option value="Harvemmin kuin kerran kuukaudessa">Harvemmin kuin kerran kuukaudessa</option>
+                            <option value="En syö kanaruokia">En syö kanaruokia</option>
+                        </select>
+                    </div>
+                    <div class="question-group">
+                        <label for="q11">11. Kuinka usein syöt liharuokia?</label>
+                        <select name="11. Kuinka usein syöt liharuokia?" id="q11">
+                            <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
+                            <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
+                            <option value="2–3 kertaa viikossa">2–3 kertaa viikossa</option>
+                            <option value="kerran viikossa">kerran viikossa</option>
+                            <option value="1–3 kertaa kuukaudessa">1–3 kertaa kuukaudessa</option>
+                            <option value="Harvemmin kuin kerran kuukaudessa">Harvemmin kuin kerran kuukaudessa</option>
+                            <option value="En syö liharuokia">En syö liharuokia</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q12">12. Kuinka usein syöt makkararuokia?</label>
+                        <select name="12. Kuinka usein syöt makkararuokia?" id="q12">
+                            <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
+                            <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
+                            <option value="2–3 kertaa viikossa">2–3 kertaa viikossa</option>
+                            <option value="kerran viikossa">kerran viikossa</option>
+                            <option value="1–3 kertaa kuukaudessa">1–3 kertaa kuukaudessa</option>
+                            <option value="Harvemmin kuin kerran kuukaudessa">Harvemmin kuin kerran kuukaudessa</option>
+                            <option value="En syö makkararuokia">En syö makkararuokia</option>
+                        </select>
+                    </div>
+
+                </section>
+
+                <!-- Section 2: Ruoanvalmistuksessa käytettävät rasvat -->
+                <section class="form-section">
+                    <h2>Ruoanvalmistuksessa käytettävät rasvat</h2>
+
+                    <div class="question-group">
+                        <label for="q13">13. Mitä rasvaa kotonasi käytetään yleisimmin ruoanvalmistuksessa?</label>
+                        <select name="13. Mitä rasvaa kotonasi käytetään yleisimmin ruoanvalmistuksessa?" id="q13">
+                            <option value="Kasviöljyä tai juoksevaa kasviöljyvalmistetta*">Kasviöljyä tai juoksevaa kasviöljyvalmistetta*</option>
+                            <option value="Kasvirasvalevitettä, jossa 55–80 % rasvaa ja sydänmerkki* tai Oivariinia, jossa on sydänmerkki">Kasvirasvalevitettä, jossa 55–80 % rasvaa ja sydänmerkki* tai Oivariinia, jossa on sydänmerkki</option>
+                            <option value="Kasvirasvalevitettä, jossa ei ole sydänmerkkiä*">Kasvirasvalevitettä, jossa ei ole sydänmerkkiä*</option>
+                            <option value="Voi-kasviöljyseosta*">Voi-kasviöljyseosta*</option>
+                            <option value="Voita tai kookosöljyä">Voita tai kookosöljyä</option>
+                            <option value="Ei mitään">Ei mitään</option>
+                            <option value="Kotona ei valmisteta ruokaa">Kotona ei valmisteta ruokaa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q14">14. Mitä kermaa tai kermankaltaista valmistetta kotonasi käytetään yleisimmin
+                        ruoanvalmistuksessa?</label>
+                        <select name="14. Mitä kermaa tai kermankaltaista valmistetta kotonasi käytetään yleisimmin ruoanvalmistuksessa?" id="q14">
+                            <option value="Kasvikermaa*">Kasvikermaa*</option>
+                            <option value="Ruoanvalmistusjogurttia*">Ruoanvalmistusjogurttia*</option>
+                            <option value="Ruokakermaa, kevytkermaa, kevytranskankermaa, kevytsmetanaa, kermaviiliä tai vastaavaa">Ruokakermaa, kevytkermaa, kevytranskankermaa, kevytsmetanaa, kermaviiliä tai vastaavaa</option>
+                            <option value="Vispikermaa, kuohukermaa, kookosmaitoa, kookoskermaa, ranskankermaa tai smetanaa tai">Vispikermaa, kuohukermaa, kookosmaitoa, kookoskermaa, ranskankermaa tai smetanaa tai</option>
+                            <option value="Ei mitään">Ei mitään</option>
+                            <option value="Kotona ei valmisteta ruokaa">Kotona ei valmisteta ruokaa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q15">15. Kuinka usein käytät kasviöljypohjaista kastiketta tai kasviöljyjä lisättynä salaattiin tai valmiiseen ruokaan?</label>
+                        <select name="15. Kuinka usein käytät kasviöljypohjaista kastiketta tai kasviöljyjä lisättynä salaattiin tai valmiiseen ruokaan?" id="q15">
+                            <option value="Päivittäin">Päivittäin</option>
+                            <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
+                            <option value="2–3 kertaa viikossa">2–3 kertaa viikossa</option>
+                            <option value="Kerran viikossa tai harvemmin">Kerran viikossa tai harvemmin</option>
+                            <option value="En käytä kasviöljyjä">En käytä kasviöljyjä</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Leipärasva -->
+                <section class="form-section">
+                    <h2>Leipärasva</h2>
+                    <div class="question-group">
+                        <label for="q16">16. Mitä rasvaa käytät levitteenä leivällä?</label>
+                        <select name="16. Mitä rasvaa käytät levitteenä leivällä?" id="q16">
+                            <option value="Kasvirasvalevitettä, jossa on 55–80 % rasvaa ja sydänmerkki*, kasviöljyä* tai Oivariinia, jossa on">Kasvirasvalevitettä, jossa on 55–80 % rasvaa ja sydänmerkki*, kasviöljyä* tai Oivariinia, jossa on</option>
+                            <option value="Kasvirasvalevitettä, jossa on 30–40 % rasvaa ja sydänmerkki*">Kasvirasvalevitettä, jossa on 30–40 % rasvaa ja sydänmerkki*</option>
+                            <option value="Kasvirasvalevitettä, jossa ei ole sydänmerkkiä*">Kasvirasvalevitettä, jossa ei ole sydänmerkkiä*</option>
+                            <option value="Voi-kasviöljyseosta*">Voi-kasviöljyseosta*</option>
+                            <option value="Voita">Voita</option>
+                            <option value="En käytä mitään">En käytä mitään</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Peruna- ja viljalisukkeet -->
+                <section class="form-section">
+                    <h2>Peruna- ja viljalisukkeet</h2>
+
+                    <div class="question-group">
+                        <label for="q17">17. Kuinka paljon syöt perunaa?</label>
+                        <select name="17. Kuinka paljon syöt perunaa?" id="q17">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö perunaa">En syö perunaa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q18">18. Kuinka paljon syöt täysjyväpastaa tai muita täysjyväisiä lisukkeita?</label>
+                        <select name="18. Kuinka paljon syöt täysjyväpastaa tai muita täysjyväisiä lisukkeita?" id="q18">
+                            <option value="4 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">4–5 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2–3 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q19">19. Kuinka paljon syöt tavallista pastaa tai viljalisukkeita?</label>
+                        <select name="19. Kuinka paljon syöt tavallista pastaa tai viljalisukkeita?" id="q19">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Kasvikset, marjat ja hedelmät -->
+                <section class="form-section">
+                    <h2>Kasvikset, marjat ja hedelmät</h2>
+
+                    <div class="question-group">
+                        <label for="q20">20. Kuinka paljon syöt vihanneksia, juureksia ja sieniä?</label>
+                        <select name="20. Kuinka paljon syöt vihanneksia, juureksia ja sieniä?" id="q20">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö vihanneksia, juureksia tai sieniä">En syö vihanneksia, juureksia tai sieniä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q21">21. Kuinka paljon syöt marjoja ja hedelmiä?</label>
+                        <select name="21. Kuinka paljon syöt marjoja ja hedelmiä?" id="q21">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö marjoja tai hedelmiä">En syö marjoja tai hedelmiä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q22">22. Kuinka paljon juot täysmehuja?</label>
+                        <select name="22. Kuinka paljon juot täysmehuja?" id="q22">
+                            <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="5–6 annosta viikossa">5–6 annosta viikossa</option>
+                            <option value="3–4 annosta viikossa">3–4 annosta viikossa</option>
+                            <option value="1–2 annosta viikossa">1–2 annosta viikossa</option>
+                            <option value="Vähemmän kuin annoksen viikossa">Vähemmän kuin annoksen viikossa</option>
+                            <option value="En juo täysmehuja">En juo täysmehuja</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Palkokasvit ja pähkinät -->
+                <section class="form-section">
+                    <h2>Palkokasvit ja pähkinät</h2>
+
+                    <div class="question-group">
+                        <label for="q23">23. Kuinka paljon syöt palkokasveja ja niistä tehtyjä valmisteita?</label>
+                        <select name="23. Kuinka paljon syöt palkokasveja ja niistä tehtyjä valmisteita?" id="q23">
+                            <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q24">24. Kuinka paljon syöt pähkinöitä, siemeniä ja manteleita tai niistä tehtyjä levitteitä?</label>
+                        <select name="24. Kuinka paljon syöt pähkinöitä, siemeniä ja manteleita tai niistä tehtyjä levitteitä?" id="q24">
+                            <option value="2 annosta tai enemmän päivässä">2 annosta tai enemmän päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Leipä, puuro, mysli ja murot -->
+                <section class="form-section">
+                    <h2>Leipä, puuro, mysli ja murot</h2>
+
+                    <div class="question-group">
+                        <label for="q25">25. Kuinka paljon syöt ruisleipää tai sataprosenttista kauraleipää?</label>
+                        <select name="25. Kuinka paljon syöt ruisleipää tai sataprosenttista kauraleipää?" id="q25">
+                            <option value="6 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
+                            <option value="4–5 annosta päivässä">4–5 annosta päivässä</option>
+                            <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q26">26. Kuinka paljon syöt muuta runsaskuituista leipää?</label>
+                        <select name="26. Kuinka paljon syöt muuta runsaskuituista leipää?" id="q26">
+                            <option value="6 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
+                            <option value="4–5 annosta päivässä">4–5 annosta päivässä</option>
+                            <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q27">27. Kuinka paljon syöt puuroa, runsaskuituisia myslejä tai muroja?</label>
+                        <select name="27. Kuinka paljon syöt puuroa, runsaskuituisia myslejä tai muroja?" id="q27">
+                            <option value="6 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
+                            <option value="4–5 annosta päivässä">4–5 annosta päivässä</option>
+                            <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q28">28. Kuinka paljon syöt vähäkuituista leipää, pullaa tai muroja?</label>
+                        <select name="28. Kuinka paljon syöt vähäkuituista leipää, pullaa tai muroja?" id="q28">
+                            <option value="6 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
+                            <option value="4–5 annosta päivässä">4–5 annosta päivässä</option>
+                            <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Lihavalmisteet ja kananmuna -->
+                <section class="form-section">
+                    <h2>Lihavalmisteet ja kananmuna</h2>
+
+                    <div class="question-group">
+                        <label for="q29">29. Kuinka paljon syöt lihaleikkeleitä?</label>
+                        <select name="29. Kuinka paljon syöt lihaleikkeleitä?" id="q29">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö lihaleikkeleitä">En syö lihaleikkeleitä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q30">30. Kuinka paljon syöt leikkelemakkaraa?</label>
+                        <select name="30. Kuinka paljon syöt leikkelemakkaraa?" id="q30">
+                            <option value="5 annosta päivässä tai enemmän">5 annosta päivässä tai enemmän</option>
+                            <option value="3–4 annosta päivässä">3–4 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö leikkelemakkaraa">En syö leikkelemakkaraa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q31">31. Kuinka paljon syöt kananmunia?</label>
+                        <select name="31. Kuinka paljon syöt kananmunia?" id="q31">
+                            <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö kananmunia">En syö kananmunia</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Juusto, maitovalmisteet ja kasvipohjaiset vaihtoehdot -->
+                <section class="form-section">
+                    <h2>Juusto, maitovalmisteet ja kasvipohjaiset vaihtoehdot</h2>
+
+
+                    <div class="question-group">
+                        <label for="q32">32. Kuinka paljon syöt vähärasvaista juustoa (rasvaa enintään 17 %)?</label>
+                        <select name="32. Kuinka paljon syöt vähärasvaista juustoa (rasvaa enintään 17 %)?" id="q32">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö vähärasvaista juustoa">En syö vähärasvaista juustoa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q33">33. Kuinka paljon syöt rasvaista juustoa (rasvaa yli 17 %)?</label>
+                        <select name="33. Kuinka paljon syöt rasvaista juustoa (rasvaa yli 17 %)?" id="q33">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö rasvaista juustoa">En syö rasvaista juustoa</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q34">34. Kuinka paljon syöt vegaanista juustonkaltaista tuotetta?</label>
+                        <select name="34. Kuinka paljon syöt vegaanista juustonkaltaista tuotetta?" id="q34">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö vegaanista juustonkaltaista tuotetta">En syö vegaanista juustonkaltaista tuotetta</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q35">35. Kuinka paljon käytät rasvattomia tai vähärasvaisia maitovalmisteita (rasvaa enintään 1 %)?</label>
+                        <select name="35. Kuinka paljon käytät rasvattomia tai vähärasvaisia maitovalmisteita (rasvaa enintään 1 %)?" id="q35">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En käytä näitä">En käytä näitä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q36">36. Kuinka paljon käytät keskirasvaisia maitovalmisteita (rasvaa enemmän kuin 1 %, mutta alle 3 %)?</label>
+                        <select name="36. Kuinka paljon käytät keskirasvaisia maitovalmisteita (rasvaa enemmän kuin 1 %, mutta alle 3 %)?" id="q36">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En käytä keskirasvaisia maitovalmisteita">En käytä keskirasvaisia maitovalmisteita</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q37">37. Kuinka paljon käytät täysrasvaisia maitovalmisteita (rasvaa vähintään 3 %)?</label>
+                        <select name="37. Kuinka paljon käytät täysrasvaisia maitovalmisteita (rasvaa vähintään 3 %)?" id="q37">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En käytä täysrasvaisia maitovalmisteita">En käytä täysrasvaisia maitovalmisteita</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q38">38. Kuinka paljon käytät kasvipohjaisia juomia tai jogurtteja, joita on täydennetty ravintoaineilla?</label>
+                        <select name="38. Kuinka paljon käytät kasvipohjaisia juomia tai jogurtteja, joita on täydennetty ravintoaineilla?" id="q38">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="3 annosta päivässä">3 annosta päivässä</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En käytä näitä">En käytä näitä</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Suolaiset ja makeat -->
+                <section class="form-section">
+                    <h2>Suolaiset ja makeat</h2>
+
+                    <div class="question-group">
+                        <label for="q39">39. Kuinka paljon syöt pikaruokia tai suolaisia naposteltavia?</label>
+                        <select name="39. Kuinka paljon syöt pikaruokia tai suolaisia naposteltavia?" id="q39">
+                            <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="1–3 annosta kuukaudessa">1–3 annosta kuukaudessa</option>
+                            <option value="Vähemmän kuin 1 annoksen kuukaudessa">Vähemmän kuin 1 annoksen kuukaudessa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q40">40. Kuinka paljon syöt makeita leivonnaisia, jäätelöä, vanukkaita, suklaata tai makeisia?</label>
+                        <select name="40. Kuinka paljon syöt makeita leivonnaisia, jäätelöä, vanukkaita, suklaata tai makeisia?" id="q40">
+                            <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En syö näitä">En syö näitä</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q41">41. Kuinka paljon käytät sokeria tai hunajaa?</label>
+                        <select name="41. Kuinka paljon käytät sokeria tai hunajaa?" id="q41">
+                            <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
+                            <option value="En käytä näitä">En käytä näitä</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Juomat -->
+                <section class="form-section">
+                    <h2>Juomat</h2>
+
+                    <div class="question-group">
+                        <label for="q42">42. Kuinka paljon juot kahvia?</label>
+                        <select name="42. Kuinka paljon juot kahvia?" id="q42">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin annoksen viikossa">Vähemmän kuin annoksen viikossa</option>
+                            <option value="En juo kahvia">En juo kahvia</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q43">43. Kuinka paljon juot teetä?</label>
+                        <select name="43. Kuinka paljon juot teetä?" id="q43">
+                            <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
+                            <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin annoksen viikossa">Vähemmän kuin annoksen viikossa</option>
+                            <option value="En juo teetä">En juo teetä</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Mehut, virvoitusjuomat ja energiajuomat -->
+                <section class="form-section">
+                    <h2>Mehut, virvoitusjuomat ja energiajuomat</h2>
+
+                    <div class="question-group">
+                        <label for="q44">44. Kuinka paljon juot sokeroituja mehuja tai sokeroituja virvoitus- tai energiajuomia?</label>
+                        <select name="44. Kuinka paljon juot sokeroituja mehuja tai sokeroituja virvoitus- tai energiajuomia?" id="q44">
+                            <option value="3 annosta päivässä tai enemmän">3 annosta päivässä tai enemmän</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin annoksen viikossa">Vähemmän kuin annoksen viikossa</option>
+                            <option value="En juo sokeroituja juomia">En juo sokeroituja juomia</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q45">45. Kuinka paljon juot sokerittomia mehuja tai sokerittomia virvoitus- tai energiajuomia?</label>
+                        <select name="45. Kuinka paljon juot sokerittomia mehuja tai sokerittomia virvoitus- tai energiajuomia?" id="q45">
+                            <option value="3 annosta päivässä tai enemmän">3 annosta päivässä tai enemmän</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin annoksen viikossa">Vähemmän kuin annoksen viikossa</option>
+                            <option value="En juo sokerittomia juomia">En juo sokerittomia juomia</option>
+                        </select>
+                    </div>
+
+                    <div class="question-group">
+                        <label for="q46">46. Kuinka paljon juot alkoholitonta olutta, siideriä, viiniä tai long drink -juomia?</label>
+                        <select name="46. Kuinka paljon juot alkoholitonta olutta, siideriä, viiniä tai long drink -juomia?" id="q46">
+                            <option value="3 annosta päivässä tai enemmän">3 annosta päivässä tai enemmän</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin annoksen viikossa">Vähemmän kuin annoksen viikossa</option>
+                            <option value="En juo alkoholittomia juomia">En juo alkoholittomia juomia</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Section 2: Alkoholijuomat -->
+                <section class="form-section">
+                    <h2>Alkoholijuomat</h2>
+
+                    <div class="question-group">
+                        <label for="q47">47. Kuinka paljon juot alkoholijuomia?</label>
+                        <select name="47. Kuinka paljon juot alkoholijuomia?" id="q47">
+                            <option value="3 annosta päivässä tai enemmän">3 annosta päivässä tai enemmän</option>
+                            <option value="2 annosta päivässä">2 annosta päivässä</option>
+                            <option value="1 annoksen päivässä">1 annoksen päivässä</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
+                            <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="Vähemmän kuin annoksen viikossa">Vähemmän kuin annoksen viikossa</option>
+                            <option value="En juo alkoholijuomia">En juo alkoholijuomia</option>
+                        </select>
+                    </div>
+                </section>
+
+
+                <div class="form-actions">
+                    <button type="submit">Laske pistemäärä</button>
+                </div>
+            </form>
+
+            <div id="results" class="results-section" style="display: none;">
+                <h2>Tulokset</h2>
+                <div id="scoreDisplay"></div>
+                <div id="breakdown"></div>
+                <button id="resetBtn">Tyhjennä lomake</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Ruokavalioanalyysi</p>
+        </footer>
+    </div>
+
+    <script src="diet_scoring.js"></script>
+    <script>
+        document.getElementById('dietForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect all answers
+            const answers = {};
+            const formElements = this.elements;
+            
+            for (let i = 0; i < formElements.length; i++) {
+                const element = formElements[i];
+                if (element.name && element.value) {
+                    answers[element.name] = element.value;
+                }
+            }
+            
+            // Calculate score
+            const result = calculateDietScore(answers);
+            
+            // Display results
+            displayResults(result);
+        });
+        
+        function displayResults(result) {
+            const resultsSection = document.getElementById('results');
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            const breakdown = document.getElementById('breakdown');
+            
+            // Show results section
+            resultsSection.style.display = 'block';
+            
+            // Display total score
+            scoreDisplay.innerHTML = `
+                <h3>Yhteensä: ${result.total}/100 pistettä</h3>
+                <div class="score-bar">
+                    <div class="score-fill" style="width: ${result.total}%"></div>
+                </div>
+                <p>${getScoreDescription(result.total)}</p>
+            `;
+            
+            // Display breakdown
+            breakdown.innerHTML = `
+                <h4>Osapisteet:</h4>
+                <ul>
+                    <li>Ateriarytmi: ${result.breakdown.ateriarytmi}/10</li>
+                    <li>Kasvis-, kala- ja liharuoka: ${result.breakdown.kasvisKalaLiha}/10</li>
+                    <li>Viljavalmisteet ja peruna: ${result.breakdown.viljavalmisteetPeruna}/20</li>
+                    <li>Rasvan laatu: ${result.breakdown.rasvanLaatu}/15</li>
+                    <li>Kasvikset, marjat ja hedelmät: ${result.breakdown.kasviksetMarjatHedelmit}/20</li>
+                    <li>Naposteltavat ja juomat: ${result.breakdown.naposteltavatJuomat}/15</li>
+                    <li>Maitovalmisteet ja kasvipohjaiset vaihtoehdot: ${result.breakdown.maitovalmisteet}/10</li>
+                </ul>
+            `;
+            
+            // Scroll to results
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function getScoreDescription(score) {
+            if (score >= 90) return "Erinomainen ruokavalio!";
+            if (score >= 75) return "Hyvä ruokavalio.";
+            if (score >= 60) return "Tyydyttävä ruokavalio.";
+            if (score >= 45) return "Keskitaso.";
+            return "Parannettavaa.";
+        }
+        
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            document.getElementById('dietForm').reset();
+            document.getElementById('results').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
