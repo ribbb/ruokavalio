@@ -64,6 +64,13 @@ header p {
     color: #444;
 }
 
+.question-explanation {
+    margin: 0 0 8px 0;
+    color: #444;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
 .question-group select {
     width: 100%;
     padding: 10px;
