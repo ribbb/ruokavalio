@@ -1,5 +1,9 @@
 /* Diet Analyzer CSS Styles */
 
+/* ============================================================
+   BASE
+   ============================================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,190 +11,415 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #263238;
+    background: #eef2f3;
+    min-height: 100vh;
 }
 
+
+/* ============================================================
+   MAIN CONTAINER
+   ============================================================ */
+
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
 
 header {
     text-align: center;
-    padding: 20px 0;
-    border-bottom: 2px solid #e0e0e0;
+    padding: 10px 0 30px;
     margin-bottom: 30px;
+    border-bottom: 1px solid #e4e8ea;
 }
 
 header h1 {
-    color: #2c5e1a;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    color: #245b35;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
 }
 
 header p {
-    color: #666;
-    font-size: 1.1em;
+    max-width: 650px;
+    margin: 0 auto;
+    color: #68757c;
+    font-size: 1.05rem;
 }
+
+
+/* ============================================================
+   FORM SECTIONS
+   ============================================================ */
 
 .form-section {
     margin-bottom: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    border-left: 4px solid #2c5e1a;
+    padding: 25px;
+    background: #f8faf9;
+    border: 1px solid #e3e9e5;
+    border-radius: 12px;
+    border-left: 5px solid #2c6e3f;
 }
 
 .form-section h2 {
-    color: #2c5e1a;
-    margin-bottom: 20px;
-    font-size: 1.4em;
+    color: #245b35;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    font-weight: 650;
 }
 
+
+/* ============================================================
+   QUESTIONS
+   ============================================================ */
+
 .question-group {
-    margin-bottom: 15px;
+    margin-bottom: 24px;
+}
+
+.question-group:last-child {
+    margin-bottom: 0;
 }
 
 .question-group label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #444;
+    margin-bottom: 7px;
+    color: #263238;
+    font-size: 1rem;
+    font-weight: 650;
 }
 
+
+/* ============================================================
+   QUESTION EXPLANATION
+   ============================================================ */
+
 .question-explanation {
-    margin: 0 0 8px 0;
-    color: #444;
-    font-size: 0.9em;
-    line-height: 1.4;
+    margin: 0 0 10px 0;
+    padding: 10px 13px;
+    background: #f0f4f2;
+    border-left: 3px solid #8aa895;
+    border-radius: 5px;
+
+    color: #66736b;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
+
+
+/* ============================================================
+   DROPDOWN
+   ============================================================ */
 
 .question-group select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1em;
-    background-color: white;
+    min-height: 46px;
+    padding: 10px 14px;
+
+    color: #263238;
+    background-color: #ffffff;
+
+    border: 1px solid #cfd8d3;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
 }
 
+.question-group select:hover {
+    border-color: #8aa895;
+}
+
+.question-group select:focus {
+    outline: none;
+    border-color: #2c6e3f;
+    box-shadow: 0 0 0 3px rgba(44, 110, 63, 0.12);
+}
+
+
+/* ============================================================
+   FORM ACTIONS
+   ============================================================ */
+
 .form-actions {
-    text-align: center;
     margin-top: 30px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+
+    background: #f4f6f5;
+    border: 1px solid #e1e6e3;
+    border-radius: 12px;
 }
 
 .form-actions button {
-    background-color: #2c5e1a;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.1em;
+    min-width: 200px;
+    padding: 13px 28px;
+
+    color: #ffffff;
+    background: #2c6e3f;
+
     border: none;
-    border-radius: 4px;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+
     cursor: pointer;
-    transition: background-color 0.3s;
+
+    box-shadow: 0 3px 8px rgba(44, 110, 63, 0.2);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
 }
 
 .form-actions button:hover {
-    background-color: #1e4212;
+    background: #245b35;
+    box-shadow: 0 5px 12px rgba(44, 110, 63, 0.25);
+    transform: translateY(-1px);
 }
+
+.form-actions button:active {
+    transform: translateY(0);
+}
+
+
+/* ============================================================
+   RESULTS
+   ============================================================ */
 
 .results-section {
     margin-top: 30px;
-    padding: 20px;
-    background-color: #e8f5e9;
-    border-radius: 8px;
-    border-left: 4px solid #4caf50;
+    padding: 30px;
+
+    background: #f1f8f3;
+    border: 1px solid #d9e9dc;
+    border-left: 5px solid #4caf50;
+
+    border-radius: 12px;
 }
 
 .results-section h2 {
-    color: #2c5e1a;
     margin-bottom: 20px;
+    color: #245b35;
+    font-size: 1.6rem;
 }
 
 .results-section h3 {
-    color: #2c5e1a;
     margin-bottom: 15px;
+    color: #2c6e3f;
+    font-size: 1.2rem;
 }
+
+
+/* ============================================================
+   SCORE BAR
+   ============================================================ */
 
 .score-bar {
     width: 100%;
-    height: 20px;
-    background-color: #ddd;
-    border-radius: 10px;
+    height: 22px;
+    margin: 20px 0;
+
     overflow: hidden;
-    margin: 15px 0;
+
+    background: #dfe5e1;
+    border-radius: 11px;
 }
 
 .score-fill {
     height: 100%;
-    background: linear-gradient(90deg, #4caf50, #8bc34a);
-    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #4caf50,
+        #8bc34a
+    );
+
+    border-radius: 11px;
+
     transition: width 1s ease-in-out;
 }
 
+
+/* ============================================================
+   RESULTS LIST
+   ============================================================ */
+
 .results-section ul {
-    list-style-type: none;
     padding: 0;
+    list-style: none;
 }
 
 .results-section li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-    font-weight: bold;
+    padding: 11px 0;
+
+    color: #45534a;
+    font-weight: 600;
+
+    border-bottom: 1px solid #dce6df;
 }
 
 .results-section li:last-child {
     border-bottom: none;
 }
 
+
+/* ============================================================
+   RESET BUTTON
+   ============================================================ */
+
 #resetBtn {
-    background-color: #6c757d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
     margin-top: 20px;
-    font-size: 1em;
+    padding: 10px 20px;
+
+    color: #ffffff;
+    background: #6c757d;
+
+    border: none;
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
 }
 
 #resetBtn:hover {
-    background-color: #5a6268;
+    background: #545b62;
+    transform: translateY(-1px);
 }
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
 footer {
+    margin-top: 35px;
+    padding-top: 20px;
+
     text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-    border-top: 1px solid #e0e0e0;
-    color: #666;
-    font-size: 0.9em;
+
+    border-top: 1px solid #e1e5e3;
+
+    color: #78837d;
+    font-size: 0.85rem;
 }
 
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
 @media (max-width: 768px) {
+
+    body {
+        background: #ffffff;
+    }
+
     .container {
-        padding: 10px;
-        margin: 10px;
+        width: 100%;
+        margin: 0;
+        padding: 20px 15px;
+        border-radius: 0;
+        box-shadow: none;
     }
-    
+
+    header {
+        padding: 10px 0 25px;
+        margin-bottom: 25px;
+    }
+
     header h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
-    
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    .form-section {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    .form-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .question-group {
+        margin-bottom: 20px;
+    }
+
+    .question-group select {
+        min-height: 48px;
+        font-size: 1rem;
+    }
+
+    .question-explanation {
+        font-size: 0.85rem;
+    }
+
+    .form-actions {
+        padding: 20px 15px;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .results-section {
+        padding: 20px;
+    }
+}
+
+
+/* ============================================================
+   SMALL PHONES
+   ============================================================ */
+
+@media (max-width: 400px) {
+
+    .container {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
     .form-section {
         padding: 15px;
     }
-    
-    .question-group select {
-        padding: 8px;
+
+    .form-section h2 {
+        font-size: 1.15rem;
     }
 }
