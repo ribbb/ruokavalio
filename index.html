@@ -10,14 +10,15 @@
     <div class="container">
         <header>
             <h1>Ruokavalioanalyysi</h1>
-            <p>Arvioi ruokavaliosi terveysvaikutusta</p>
+            <p>Mieti tavanomaista ruokavaliotasi viimeisen parin kuukauden ajalta ja vastaa seuraaviin kysymyksiin. Arvioi
+                keskimääräistä syömistäsi ja juomistasi. Lue kysymykset huolella ja valitse parhaiten sopiva vaihtoehto.</p>
         </header>
 
         <main>
             <form id="dietForm">
                 <!-- Section 1: Ateriarytmi -->
                 <section class="form-section">
-                    <h2>Ateriarytmi</h2>
+                    <h2>Ateriarytmi (0–10 pistettä)</h2>
                     <div class="question-group">
                         <label for="q1">1. Kuinka usein syöt aamupalan?</label>
                         <select name="1. Kuinka usein syöt aamupalan?" id="q1">
@@ -101,6 +102,10 @@
                     <h2>Pääruokalajit</h2>
                     <div class="question-group">
                         <label for="q8">8. Kuinka usein syöt kasvisruokia?</label>
+                        <p class="question-explanation">
+                            Esimerkiksi kasvissosekeittoa, pinaattiohukaisia, soijamakaronilaatikkoa, kasvispihvejä,
+                            kasvisnakkikastiketta tai kasviproteiinivalmistetta sisältävää ruokaa*.
+                        </p>
                         <select name="8. Kuinka usein syöt kasvisruokia?" id="q8">
                             <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
                             <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
@@ -114,6 +119,9 @@
 
                     <div class="question-group">
                         <label for="q9">9. Kuinka usein syöt kalaruokia?</label>
+                        <p class="question-explanation">
+                            Esimerkiksi uunikalaa, savukalaa, kalakeittoa, sushia, kalapuikkoja, -pihvejä tai -pyöryköitä.
+                        </p>
                         <select name="9. Kuinka usein syöt kalaruokia?" id="q9">
                             <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
                             <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
@@ -126,6 +134,9 @@
                     </div>
                     <div class="question-group">
                         <label for="q10">10. Kuinka usein syöt kana- tai kalkkunaruokia?</label>
+                        <p class="question-explanation">
+                            Esimerkiksi broileria tai kalkkunaa paistettuna, kastikkeena, pastana tai salaattina.
+                        </p>
                         <select name="10. Kuinka usein syöt kana- tai kalkkunaruokia?" id="q10">
                             <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
                             <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
@@ -138,6 +149,9 @@
                     </div>
                     <div class="question-group">
                         <label for="q11">11. Kuinka usein syöt liharuokia?</label>
+                        <p class="question-explanation">
+                            Esimerkiksi liha-makaronilaatikkoa, lihakeittoa, jauhelihakastiketta, paistia, lihapullia tai maksalaatikkoa.
+                        </p>
                         <select name="11. Kuinka usein syöt liharuokia?" id="q11">
                             <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
                             <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
@@ -151,6 +165,9 @@
 
                     <div class="question-group">
                         <label for="q12">12. Kuinka usein syöt makkararuokia?</label>
+                        <p class="question-explanation">
+                            Esimerkiksi uunimakkaraa, grillimakkaraa, makkarakeittoa, nakkikastiketta tai broilerinakkeja.
+                        </p>
                         <select name="12. Kuinka usein syöt makkararuokia?" id="q12">
                             <option value="7 kertaa viikossa tai useammin">7 kertaa viikossa tai useammin</option>
                             <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
@@ -170,6 +187,9 @@
 
                     <div class="question-group">
                         <label for="q13">13. Mitä rasvaa kotonasi käytetään yleisimmin ruoanvalmistuksessa?</label>
+                        <p class="question-explanation">
+                            Huomioi käyttö esimerkiksi paistamisessa ja leivonnassa.
+                        </p>
                         <select name="13. Mitä rasvaa kotonasi käytetään yleisimmin ruoanvalmistuksessa?" id="q13">
                             <option value="Kasviöljyä tai juoksevaa kasviöljyvalmistetta*">Kasviöljyä tai juoksevaa kasviöljyvalmistetta*</option>
                             <option value="Kasvirasvalevitettä, jossa 55–80 % rasvaa ja sydänmerkki* tai Oivariinia, jossa on sydänmerkki">Kasvirasvalevitettä, jossa 55–80 % rasvaa ja sydänmerkki* tai Oivariinia, jossa on sydänmerkki</option>
@@ -196,6 +216,10 @@
 
                     <div class="question-group">
                         <label for="q15">15. Kuinka usein käytät kasviöljypohjaista kastiketta tai kasviöljyjä lisättynä salaattiin tai valmiiseen ruokaan?</label>
+                        <p class="question-explanation">
+                            Kasviöljyjä, kuten rypsi-, rapsi-, oliivi-, auringonkukka- tai pellavansiemenöljyä tai kasviöljypohjaisia
+                            salaatinkastikkeita tai majoneesia.
+                        </p>
                         <select name="15. Kuinka usein käytät kasviöljypohjaista kastiketta tai kasviöljyjä lisättynä salaattiin tai valmiiseen ruokaan?" id="q15">
                             <option value="Päivittäin">Päivittäin</option>
                             <option value="4–6 kertaa viikossa">4–6 kertaa viikossa</option>
@@ -228,6 +252,11 @@
 
                     <div class="question-group">
                         <label for="q17">17. Kuinka paljon syöt perunaa?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi 2─3 keskikokoista keitettyä perunaa, kaksi desilitraa perunasosetta tai yksi iso
+                            uuniperuna. Huomioi myös keitoissa ja laatikoissa olevat perunat. Huomaa, että ranskalaiset perunat ja
+                            perunalastut kysytään myöhemmin.
+                        </p>
                         <select name="17. Kuinka paljon syöt perunaa?" id="q17">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
@@ -241,6 +270,11 @@
 
                     <div class="question-group">
                         <label for="q18">18. Kuinka paljon syöt täysjyväpastaa tai muita täysjyväisiä lisukkeita?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi kaksi desilitraa keitettyä täysjyväpastaa tai -nuudelia tai yksi desilitra täysjyväriisiä,
+                            ohraa, kauraa tai täysjyväcouscousia, bulguria tai kvinoaa tai gluteenittomia vaihtoehtoja, joissa on kuitua
+                            vähintään 6 g / 100 g tai joilla on sydänmerkki.
+                        </p>
                         <select name="18. Kuinka paljon syöt täysjyväpastaa tai muita täysjyväisiä lisukkeita?" id="q18">
                             <option value="4 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">4–5 annosta päivässä</option>
@@ -255,6 +289,10 @@
 
                     <div class="question-group">
                         <label for="q19">19. Kuinka paljon syöt tavallista pastaa tai viljalisukkeita?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi kaksi desilitraa keitettyä tavallista pastaa tai nuudelia tai yksi desilitra valkoista riisiä,
+                            nuudelia, couscousia tai hirssiä tai gluteenittomia vaihtoehtoja, joissa on kuitua alle 6 g / 100 g.
+                        </p>
                         <select name="19. Kuinka paljon syöt tavallista pastaa tai viljalisukkeita?" id="q19">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -274,6 +312,11 @@
 
                     <div class="question-group">
                         <label for="q20">20. Kuinka paljon syöt vihanneksia, juureksia ja sieniä?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi 1,5 desilitraa raastetta, salaattia tai keitettyjä tai paistettuja vihanneksia, juureksia ja
+                            sieniä tai yksi keskikokoinen porkkana tai tomaatti. Huomioi myös ruoissa, kuten keitoissa ja pataruoissa
+                            syömäsi kasvikset.
+                        </p>
                         <select name="20. Kuinka paljon syöt vihanneksia, juureksia ja sieniä?" id="q20">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -288,6 +331,10 @@
 
                     <div class="question-group">
                         <label for="q21">21. Kuinka paljon syöt marjoja ja hedelmiä?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi kourallinen (1 dl) marjoja tai hedelmäsalaattia tai yksi keskikokoinen omena, päärynä
+                            tai klementiini tai pieni banaani tai appelsiini.
+                        </p>
                         <select name="21. Kuinka paljon syöt marjoja ja hedelmiä?" id="q21">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -302,6 +349,10 @@
 
                     <div class="question-group">
                         <label for="q22">22. Kuinka paljon juot täysmehuja?</label>
+                        <p class="question-explanation">
+                            Annos on lasillinen eli noin kaksi desilitraa. Täysmehu tarkoittaa mehua, johon ei ole lisätty sokeria tai
+                            vettä. Huomioi myös kaupan smoothiet.
+                        </p>
                         <select name="22. Kuinka paljon juot täysmehuja?" id="q22">
                             <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
                             <option value="1 annoksen päivässä">1 annoksen päivässä</option>
@@ -320,6 +371,10 @@
 
                     <div class="question-group">
                         <label for="q23">23. Kuinka paljon syöt palkokasveja ja niistä tehtyjä valmisteita?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi noin yksi desilitra kypsiä herneitä, papuja, linssejä tai kikherneitä tai 50 g tofua tai
+                            noin yksi desilitra hummusta.
+                        </p>
                         <select name="23. Kuinka paljon syöt palkokasveja ja niistä tehtyjä valmisteita?" id="q23">
                             <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
                             <option value="1 annoksen päivässä">1 annoksen päivässä</option>
@@ -332,6 +387,10 @@
 
                     <div class="question-group">
                         <label for="q24">24. Kuinka paljon syöt pähkinöitä, siemeniä ja manteleita tai niistä tehtyjä levitteitä?</label>
+                        <p class="question-explanation">
+                            Annos on noin 2–3 ruokalusikallista (20–30 grammaa) maustamattomia ja kuorruttamattomia pähkinöitä ja
+                            siemeniä tai noin kaksi ruokalusikallista pähkinävoita tai tahinia.
+                        </p>
                         <select name="24. Kuinka paljon syöt pähkinöitä, siemeniä ja manteleita tai niistä tehtyjä levitteitä?" id="q24">
                             <option value="2 annosta tai enemmän päivässä">2 annosta tai enemmän päivässä</option>
                             <option value="1 annoksen päivässä">1 annoksen päivässä</option>
@@ -349,6 +408,12 @@
 
                     <div class="question-group">
                         <label for="q25">25. Kuinka paljon syöt ruisleipää tai sataprosenttista kauraleipää?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi keskikokoinen ruis- tai kauraleipäviipale*, näkkileipä tai kaksi viipaletta
+                            hapankorppua.
+                            *Esimerkiksi Leipomo Salonen Kaura100, Vaasan 100 % Kaura, Fazer Real Täysjyväpala 100% kaura, Vaasan
+                            Ruispalat tai Oululainen Reissumies Täysjyväruis
+                        </p>
                         <select name="25. Kuinka paljon syöt ruisleipää tai sataprosenttista kauraleipää?" id="q25">
                             <option value="6 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
                             <option value="4–5 annosta päivässä">4–5 annosta päivässä</option>
@@ -363,6 +428,12 @@
 
                     <div class="question-group">
                         <label for="q26">26. Kuinka paljon syöt muuta runsaskuituista leipää?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi keskikokoinen viipale graham- tai kaurasekaleipää, täysjyväpatonkia tai -sämpylää tai
+                            runsaskuituista gluteenitonta leipää, joissa on kuitua vähintään 6 g / 100 g tai joilla on sydänmerkki.*
+                            *Esimerkiksi Oululainen Reilu Täysjyvä, Vaasan taika taikaruis täysjyväruispaahtoleipä, Vaasan
+                            Täysjyväkauratyynyt, Fazer Paahto Täysjyvä, Porokylän gluteeniton tumma kaurapala
+                        </p>
                         <select name="26. Kuinka paljon syöt muuta runsaskuituista leipää?" id="q26">
                             <option value="6 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
                             <option value="4–5 annosta päivässä">4–5 annosta päivässä</option>
@@ -377,6 +448,11 @@
 
                     <div class="question-group">
                         <label for="q27">27. Kuinka paljon syöt puuroa, runsaskuituisia myslejä tai muroja?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi kaksi desilitraa (pieni lautasellinen) kaura-, ruis-, vehnä- tai tattarihiutalepuuroa, kaksi
+                            desilitraa täysjyvämuroja tai 0,5 desilitraa mysliä, joissa on kuitua vähintään 6 g / 100 g tai joilla on
+                            sydänmerkki.
+                        </p>
                         <select name="27. Kuinka paljon syöt puuroa, runsaskuituisia myslejä tai muroja?" id="q27">
                             <option value="6 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
                             <option value="4–5 annosta päivässä">4–5 annosta päivässä</option>
@@ -391,6 +467,11 @@
 
                     <div class="question-group">
                         <label for="q28">28. Kuinka paljon syöt vähäkuituista leipää, pullaa tai muroja?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi keskikokoinen viipale ranskanleipää, ciabattaa, patonkia, riisipiirakka, kaksi
+                            riisikakkua, kaksi desilitraa muroja, pullaviipale tai viipale gluteenitonta leipää, joissa on kuitua alle 6 g / 100
+                            g.
+                        </p>
                         <select name="28. Kuinka paljon syöt vähäkuituista leipää, pullaa tai muroja?" id="q28">
                             <option value="6 annosta päivässä tai enemmän">6 annosta päivässä tai enemmän</option>
                             <option value="4–5 annosta päivässä">4–5 annosta päivässä</option>
@@ -410,6 +491,10 @@
 
                     <div class="question-group">
                         <label for="q29">29. Kuinka paljon syöt lihaleikkeleitä?</label>
+                        <p class="question-explanation">
+                            Annos on kaksi kaupan tavallista viipaletta (yhteensä noin 20–30 g) tai neljä ohuen ohutta viipaletta (noin
+                            20 g) esimerkiksi palvikinkkua, keittokinkkua tai kalkkunaleikkelettä.
+                        </p>
                         <select name="29. Kuinka paljon syöt lihaleikkeleitä?" id="q29">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
@@ -423,6 +508,10 @@
 
                     <div class="question-group">
                         <label for="q30">30. Kuinka paljon syöt leikkelemakkaraa?</label>
+                        <p class="question-explanation">
+                            Annos on kaksi kaupan tavallista viipaletta (yhteensä noin 20–30 g) tai neljä ohuen ohutta viipaletta (noin
+                            20 g) esimerkiksi meetvurstia, lauantaimakkaraa, gotleria, jahtimakkaraa tai maksamakkaraa.
+                        </p>
                         <select name="30. Kuinka paljon syöt leikkelemakkaraa?" id="q30">
                             <option value="5 annosta päivässä tai enemmän">5 annosta päivässä tai enemmän</option>
                             <option value="3–4 annosta päivässä">3–4 annosta päivässä</option>
@@ -437,6 +526,9 @@
 
                     <div class="question-group">
                         <label for="q31">31. Kuinka paljon syöt kananmunia?</label>
+                        <p class="question-explanation">
+                            Annos on yksi kananmuna (noin 60 g) esimerkiksi keitettynä tai paistettuna.
+                        </p>
                         <select name="31. Kuinka paljon syöt kananmunia?" id="q31">
                             <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
                             <option value="1 annoksen päivässä">1 annoksen päivässä</option>
@@ -455,6 +547,11 @@
 
                     <div class="question-group">
                         <label for="q32">32. Kuinka paljon syöt vähärasvaista juustoa (rasvaa enintään 17 %)?</label>
+                        <p class="question-explanation">
+                            Annos on 2–3 juustohöyläviipaletta, 2 valmisviipaletta tai 1 sulatejuustoviipale (noin 20 g).*
+                            *Esimerkiksi Oltermanni Kevyempi 17 % tai Kasviöljy, Julia 10, Aamupala Kevyenraikas sulatejuusto, Kadett,
+                            Polar 15 % ja Edam 17 %
+                        </p>
                         <select name="32. Kuinka paljon syöt vähärasvaista juustoa (rasvaa enintään 17 %)?" id="q32">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -469,6 +566,11 @@
 
                     <div class="question-group">
                         <label for="q33">33. Kuinka paljon syöt rasvaista juustoa (rasvaa yli 17 %)?</label>
+                        <p class="question-explanation">
+                            Annos on 2–3 juustohöyläviipaletta, 2 valmisviipaletta, 1 sulatejuustoviipale (noin 20 g) tai noin 20
+                            gramman pala.*
+                            *Esimerkiksi tavallinen Edam, Emmental, Turunmaa, Oltermanni, Aura, brie, mozzarella ja feta
+                        </p>
                         <select name="33. Kuinka paljon syöt rasvaista juustoa (rasvaa yli 17 %)?" id="q33">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -483,6 +585,10 @@
 
                     <div class="question-group">
                         <label for="q34">34. Kuinka paljon syöt vegaanista juustonkaltaista tuotetta?</label>
+                        <p class="question-explanation">
+                            Annos on 2–3 juustohöyläviipaletta, 2 valmisviipaletta (noin 20 g) tai noin 20 gramman pala.*
+                            *Esimerkiksi Oddlygood Block Original, Porlammi Vege PLUS Naturel ja Mö Creek Classic
+                        </p>
                         <select name="34. Kuinka paljon syöt vegaanista juustonkaltaista tuotetta?" id="q34">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -497,6 +603,11 @@
 
                     <div class="question-group">
                         <label for="q35">35. Kuinka paljon käytät rasvattomia tai vähärasvaisia maitovalmisteita (rasvaa enintään 1 %)?</label>
+                        <p class="question-explanation">
+                            Annos on lasillinen (2 dl) esimerkiksi rasvatonta maitoa tai piimää, pikarillinen (2 dl) rasvatonta jogurttia,
+                            viiliä tai rahkaa tai puolikas pikari (100 g) rasvatonta raejuustoa. Huomioi myös kahvissa tai teessä
+                            käyttämäsi maito.
+                        </p>
                         <select name="35. Kuinka paljon käytät rasvattomia tai vähärasvaisia maitovalmisteita (rasvaa enintään 1 %)?" id="q35">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -511,6 +622,11 @@
 
                     <div class="question-group">
                         <label for="q36">36. Kuinka paljon käytät keskirasvaisia maitovalmisteita (rasvaa enemmän kuin 1 %, mutta alle 3 %)?</label>
+                        <p class="question-explanation">
+                            Annos on lasillinen (2 dl) esimerkiksi kevytmaitoa tai A-piimää, pikarillinen (2 dl) tavallista jogurttia,
+                            kevytviiliä tai rahkaa tai puolikas pikari (100 g) raejuustoa. Huomioi myös kahvissa tai teessä käyttämäsi
+                            maito.
+                        </p>
                         <select name="36. Kuinka paljon käytät keskirasvaisia maitovalmisteita (rasvaa enemmän kuin 1 %, mutta alle 3 %)?" id="q36">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -525,6 +641,10 @@
 
                     <div class="question-group">
                         <label for="q37">37. Kuinka paljon käytät täysrasvaisia maitovalmisteita (rasvaa vähintään 3 %)?</label>
+                        <p class="question-explanation">
+                            Annos on lasillinen (2 dl) esimerkiksi täysmaitoa tai pikarillinen (2 dl) turkkilaista tai Bulgarian jogurttia tai
+                            punaista viiliä. Huomioi myös kahvissa tai teessä käyttämäsi maito.
+                        </p>
                         <select name="37. Kuinka paljon käytät täysrasvaisia maitovalmisteita (rasvaa vähintään 3 %)?" id="q37">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -539,6 +659,11 @@
 
                     <div class="question-group">
                         <label for="q38">38. Kuinka paljon käytät kasvipohjaisia juomia tai jogurtteja, joita on täydennetty ravintoaineilla?</label>
+                        <p class="question-explanation">
+                            Annos on lasillinen (2 dl) tai pikarillinen (2 dl) esimerkiksi soija-, kaura- tai riisijuomia ja niistä valmistettuja
+                            hapatettuja tuotteita, joita on täydennetty kalsiumilla, D-vitamiinilla ja B12-vitamiinilla. Huomioi myös
+                            kahvissa tai teessä käyttämäsi juoma.
+                        </p>
                         <select name="38. Kuinka paljon käytät kasvipohjaisia juomia tai jogurtteja, joita on täydennetty ravintoaineilla?" id="q38">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="3 annosta päivässä">3 annosta päivässä</option>
@@ -558,6 +683,10 @@
 
                     <div class="question-group">
                         <label for="q39">39. Kuinka paljon syöt pikaruokia tai suolaisia naposteltavia?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi pitsapala, pieni hampurilainen, lihapiirakka, pasteija, croissant, pieni annos kebabia
+                            tai vöneriä tai kaksi desilitraa ranskanperunoita tai sipsejä tai yksi desilitra kuorrutettuja pähkinöitä.
+                        </p>
                         <select name="39. Kuinka paljon syöt pikaruokia tai suolaisia naposteltavia?" id="q39">
                             <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
                             <option value="1 annoksen päivässä">1 annoksen päivässä</option>
@@ -571,6 +700,10 @@
 
                     <div class="question-group">
                         <label for="q40">40. Kuinka paljon syöt makeita leivonnaisia, jäätelöä, vanukkaita, suklaata tai makeisia?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi pala piirakkaa tai kakkua, pieni viineri tai munkki, 3–4 täytekeksiä, jäätelötuutti,
+                            välipalavanukas, suklaapatukka tai kourallinen makeisia (50 g).
+                        </p>
                         <select name="40. Kuinka paljon syöt makeita leivonnaisia, jäätelöä, vanukkaita, suklaata tai makeisia?" id="q40">
                             <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
                             <option value="1 annoksen päivässä">1 annoksen päivässä</option>
@@ -583,11 +716,14 @@
 
                     <div class="question-group">
                         <label for="q41">41. Kuinka paljon käytät sokeria tai hunajaa?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi kaksi teelusikallista sokeria tai hunajaa tai kolme sokeripalaa.
+                        </p>
                         <select name="41. Kuinka paljon käytät sokeria tai hunajaa?" id="q41">
                             <option value="2 annosta päivässä tai enemmän">2 annosta päivässä tai enemmän</option>
                             <option value="1 annoksen päivässä">1 annoksen päivässä</option>
-                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
                             <option value="1–3 annosta viikossa">1–3 annosta viikossa</option>
+                            <option value="4–6 annosta viikossa">4–6 annosta viikossa</option>
                             <option value="Vähemmän kuin 1 annoksen viikossa">Vähemmän kuin 1 annoksen viikossa</option>
                             <option value="En käytä näitä">En käytä näitä</option>
                         </select>
@@ -600,6 +736,9 @@
 
                     <div class="question-group">
                         <label for="q42">42. Kuinka paljon juot kahvia?</label>
+                        <p class="question-explanation">
+                            Annos on iso kupillinen eli noin kaksi desilitraa.
+                        </p>
                         <select name="42. Kuinka paljon juot kahvia?" id="q42">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
@@ -613,6 +752,9 @@
 
                     <div class="question-group">
                         <label for="q43">43. Kuinka paljon juot teetä?</label>
+                        <p class="question-explanation">
+                            Annos on iso kupillinen eli noin kaksi desilitraa.
+                        </p>
                         <select name="43. Kuinka paljon juot teetä?" id="q43">
                             <option value="4 annosta päivässä tai enemmän">4 annosta päivässä tai enemmän</option>
                             <option value="2–3 annosta päivässä">2–3 annosta päivässä</option>
@@ -631,6 +773,9 @@
 
                     <div class="question-group">
                         <label for="q44">44. Kuinka paljon juot sokeroituja mehuja tai sokeroituja virvoitus- tai energiajuomia?</label>
+                        <p class="question-explanation">
+                            Annos on lasillinen eli noin kaksi desilitraa. Huomioi myös itse tehdyt mehut.
+                        </p>
                         <select name="44. Kuinka paljon juot sokeroituja mehuja tai sokeroituja virvoitus- tai energiajuomia?" id="q44">
                             <option value="3 annosta päivässä tai enemmän">3 annosta päivässä tai enemmän</option>
                             <option value="2 annosta päivässä">2 annosta päivässä</option>
@@ -644,6 +789,9 @@
 
                     <div class="question-group">
                         <label for="q45">45. Kuinka paljon juot sokerittomia mehuja tai sokerittomia virvoitus- tai energiajuomia?</label>
+                        <p class="question-explanation">
+                            Annos on lasillinen eli noin kaksi desilitraa.
+                        </p>
                         <select name="45. Kuinka paljon juot sokerittomia mehuja tai sokerittomia virvoitus- tai energiajuomia?" id="q45">
                             <option value="3 annosta päivässä tai enemmän">3 annosta päivässä tai enemmän</option>
                             <option value="2 annosta päivässä">2 annosta päivässä</option>
@@ -657,6 +805,9 @@
 
                     <div class="question-group">
                         <label for="q46">46. Kuinka paljon juot alkoholitonta olutta, siideriä, viiniä tai long drink -juomia?</label>
+                        <p class="question-explanation">
+                            Annos on lasillinen eli noin kaksi desilitraa.
+                        </p>
                         <select name="46. Kuinka paljon juot alkoholitonta olutta, siideriä, viiniä tai long drink -juomia?" id="q46">
                             <option value="3 annosta päivässä tai enemmän">3 annosta päivässä tai enemmän</option>
                             <option value="2 annosta päivässä">2 annosta päivässä</option>
@@ -675,6 +826,11 @@
 
                     <div class="question-group">
                         <label for="q47">47. Kuinka paljon juot alkoholijuomia?</label>
+                        <p class="question-explanation">
+                            Annos on esimerkiksi tölkillinen (3,3 dl) keskiolutta, siideriä tai long drink -juomaa, annos viiniä (12 cl),
+                            annos väkevää viiniä (8 cl) tai ravintola-annos (4 cl) väkevää alkoholijuomaa, kuten viskiä, rommia tai
+                            konjakkia.
+                        </p>
                         <select name="47. Kuinka paljon juot alkoholijuomia?" id="q47">
                             <option value="3 annosta päivässä tai enemmän">3 annosta päivässä tai enemmän</option>
                             <option value="2 annosta päivässä">2 annosta päivässä</option>
