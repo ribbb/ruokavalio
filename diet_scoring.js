@@ -640,8 +640,8 @@ function scoreQuestion41(answers) {
     const points = {
         "2 annosta päivässä tai enemmän": 0,
         "1 annoksen päivässä": 1,
-        "1–3 annosta viikossa": 1,
-        "4–6 annosta viikossa": 1,
+        "4–6 annosta viikossa": 2,
+        "1–3 annosta viikossa": 2,
         "Vähemmän kuin 1 annoksen viikossa": 2,
         "En käytä näitä": 2
     };
