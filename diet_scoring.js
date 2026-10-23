@@ -774,7 +774,7 @@ function scoreMaitovalmisteet(answers) {
 
 
     // 4. Rasvaisten juustojen ja juustonkaltaisten tuotteiden
-    rasvaiset_viikossa = rasvaiset_juustot + vegaaniset_juustot;
+    rasvaiset_viikossa = (rasvaiset_juustot + vegaaniset_juustot) * 7;
     if (rasvaiset_viikossa <= 0.30) total += 2;
     else total += 0;
 
