@@ -764,19 +764,29 @@ function scoreMaitovalmisteet(answers) {
 
     //console.log("Max score <=1")
     //console.log(keskirasvaiset_maidot)
-    if (keskirasvaiset_maidot <= 1) total += 1;
-    else total += 0;
+
+    rasvaiset_maitovalmisteet = keskirasvaiset_maidot + täysirasvaiset_maidot + rasvaiset_juustot + vegaaniset_juustot
+
+    if (rasvaiset_juustot >= 2) total += 0;
+    else if (rasvaiset_juustot >= 1) total += 1;
+    else if (rasvaiset_juustot > 0.5) total += 2;
+    else if (rasvaiset_juustot >= 0.01) total += 3;
+    else total += 4;
+
+
+    //if (keskirasvaiset_maidot <= 1) total += 1;
+    //else total += 0;
 
     //console.log("Max score <=1")
     //console.log(täysirasvaiset_maidot)
-    if ((täysirasvaiset_maidot * 7) <= 1) total += 1;
-    else total += 0;
+    //if ((täysirasvaiset_maidot * 7) <= 1) total += 1;
+    //else total += 0;
 
 
     // 4. Rasvaisten juustojen ja juustonkaltaisten tuotteiden
-    rasvaiset_viikossa = (rasvaiset_juustot + vegaaniset_juustot) * 7;
-    if (rasvaiset_viikossa <= 0.30) total += 2;
-    else total += 0;
+    //rasvaiset_viikossa = (rasvaiset_juustot + vegaaniset_juustot) * 7;
+    //if (rasvaiset_viikossa <= 0.30) total += 2;
+    //else total += 0;
 
     return total
 }
